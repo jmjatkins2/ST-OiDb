@@ -1,0 +1,134 @@
+﻿<div ng-controller="calibrationsController as calibrations">
+
+    <!-- device search -->
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="form-group">
+                <label></label>
+                <div class="input-group">
+                    <span class="input-group-addon input-glyphicon">
+                        <span ng-show="!loadingLocations" class="glyphicon glyphicon-search"></span>
+                        <span ng-show="loadingLocations" class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
+                    </span>
+                    <input id="serialNoSearch" type="text" class="form-control input-glyphicon-left"
+                           ng-keyup="calibrations.onKeyUpX($event)"
+                           ng-model="calibrations.selectedDevice"
+                           placeholder="Enter Device Serial Number"
+                           typeahead="device.serialNo for device in calibrations.searchDevicesBySerialNo($viewValue)"
+                           typeahead-loading="loadingLocations"
+                           typeahead-min-length="3"
+                           typeahead-on-select="calibrations.onDeviceSelect($item, $model, $label)">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- device calibration results -->
+    <div ng-show="calibrations.selectedDevice.deviceId != null" class="row">
+        
+        <!-- list of device calibrations -->
+        <!--
+        <div ng-show="calibrations.selectedDevice.calibrations.length > 1" class="col-sm-4">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h7>Calibration Tests</h7></div>
+                <div class="panel-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Date Created</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="calibration in calibrations.selectedDevice.calibrations" ng-click="calibrations.onCalibrationSelect(calibration);" ng-class="{active: calibration.calibrationId == calibrations.selectedCalibration.calibrationId}">
+                                <td>{{calibrations.selectedDevice.calibrations.length - $index }}</td>
+                                <td>{{calibration.dateCreated | date : 'dd MMM yyyy'}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        -->
+        <!-- device selected calibration info -->
+        <div class="col-sm-8" id="grid-calibrations-results">
+            <div id="calibrations_results" class="panel panel-default">
+                <div class="panel-heading">
+                    <button class="btn btn-primary no_print btn-sm pull-right panel-header-button" ng-print print-element-id="calibrations_results"><i class="fa fa-print"></i> Print</button>
+                    <h7>Calibration Test Results</h7>
+                </div>
+                <div class="panel-body">
+                    <p ng-show="calibrations.selectedDevice.calibrations.length == 0">No calibrations exist for this device.</p>
+                    <table ng-show="calibrations.selectedCalibration != null" class="table borderless">
+                        <tbody>
+                            <tr class="rowDivider">
+                                <td rowspan="2">Test</td>
+                                <td>Date</td>
+                                <td>{{calibrations.selectedCalibration.dateCreated | date : 'dd MMM yyyy'}}</td>
+                            </tr>
+                            <tr>
+                                <td>Operator</td>
+                                <td>JA</td>
+                            </tr>
+                            <tr class="rowDivider">
+                                <td rowspan="2">Device</td>
+                                <td>Model</td>
+                                <td>{{calibrations.selectedDevice.modelName}}</td>
+                            </tr>
+                            <tr>
+
+                                <td>Serial No</td>
+                                <td>{{calibrations.selectedDevice.serialNo}}</td>
+                            </tr>
+                            <tr class="rowDivider">
+                                <td rowspan="5">Source</td>
+                                <td>Model</td>
+                                <td>Center 327</td>
+                            </tr>
+                            <tr>
+                                <td>Serial</td>
+                                <td>130307390</td>
+                            </tr>
+                            <tr>
+                                <td>Frequency</td>
+                                <td>250 Hz</td>
+                            </tr>
+                            <tr>
+                                <td>Coupler</td>
+                                <td>OIC1</td>
+                            </tr>
+                            <tr>
+                                <td>Level</td>
+                                <td>{{calibrations.selectedCalibration.refLevel}} dB re. 1 μPa</td>
+                            </tr>
+                            <tr class="rowDivider">
+                                <td rowspan="2">Reference</td>
+                                <td>Model</td>
+                                <td>B&K 2236</td>
+                            </tr>
+                            <tr>
+                                <td>Serial</td>
+                                <td>2015497</td>
+                            </tr>
+                            <tr class="rowDivider">
+                                <td rowspan="2">Full Scale Response</td>
+                                <td>High Gain</td>
+                                <td><b>{{calibrations.selectedCalibration.highFreq}} dB re. 1 μPa</b></td>
+                            </tr>
+                            <tr>
+                                <td>Low Gain</td>
+                                <td><b>{{calibrations.selectedCalibration.lowFreq}} dB re. 1 μPa</b></td>
+                            </tr>
+                            <tr class="rowDivider">
+                                <td rowspan="2">Calibration Tone</td>
+                                <td>RTI Level @ 1kHz </td>
+                                <td><b>{{calibrations.selectedCalibration.tone}} dB re. 1 μPa</b></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

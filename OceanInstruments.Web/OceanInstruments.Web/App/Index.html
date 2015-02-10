@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="oceanInstruments" moznomarginboxes mozdisallowselectionprint>
+<head>
+    <title>Ocean Instruments</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Sans font from Google CDN -->
+    <!-- TODO: are these needed? -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- jquery -->
+    <script src="../Scripts/jquery-2.1.1.min.js"></script>
+
+    <!-- angularjs 1.3.6 -->
+    <script src="../Scripts/angular.min.js"></script>
+    <script src="../Scripts/angular-cookies.min.js"></script>
+    <script src="../Scripts/angular-route.min.js"></script>
+
+    <!-- Auth0 begin - we are using Auth0 for authentication -->
+        <!-- Auth0 Lock script and AngularJS modules -->
+        <script src="../scripts/auth0/lock-6.min.js"></script><!--<script src="//cdn.auth0.com/js/lock-6.js"></script>-->
+        <script src="../Scripts/auth0/auth0-angular-3.min.js"></script><!--<script type="text/javascript" src="//cdn.auth0.com/w2/auth0-angular-3.js"> </script>-->
+        <!-- angular-jwt and angular-storage, required for auth0 -->
+        <script src="../scripts/auth0/angular-storage.min.js"></script><!--<script type="text/javascript" src="//rawgit.com/auth0/angular-storage/master/dist/angular-storage.js"></script>-->
+        <script src="../scripts/auth0/angular-jwt.min.js"></script><!--<script type="text/javascript" src="//rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>-->
+    <!-- Auth0 end -->
+
+    <!-- bootstrap 3.2.0 -->
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <!--<link href="../Content/bootstrap-theme.css" rel="stylesheet" />--><!-- non-flat theme, so don't actually want this -->
+
+    <!-- ocean instruments stylesheet -->
+    <link href="../Content/Site.css" rel="stylesheet" />
+
+    <!-- angular-ui - bootstrap helper -->
+    <script src="../Scripts/angular-ui/ui-bootstrap.min.js"></script>
+    <script src="../Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+
+    <!-- ocean instruments code -->
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="controllers/homeController.js"></script>
+    <script type="text/javascript" src="controllers/loginController.js"></script>
+    <script type="text/javascript" src="controllers/calibrationsController.js"></script>
+    <script type="text/javascript" src="directives/printDirective.js"></script>
+</head>
+<body ng-controller="mainController">
+    <div id="main-navbar" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+
+            <!-- Main navbar header -->
+            <div class="navbar-header">
+                <!-- Main navbar toggle -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Logo -->
+                <a class="navbar-brand" href="#/">
+                    <img alt="OceanInstruments" src="../Content/Images/oceaninstruments_logo_side.png">
+                </a>
+            </div>
+
+            <!-- Main navbar -->
+            <div id="main-navbar-collapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="//www.oceaninstruments.co.nz">Home</a>
+                    </li>
+                <!-- 
+                    <li>
+                        <a href="#/calibrations">Calibration Results</a>
+                    </li>
+                    <li>
+                        <a ng-show="!auth.isAuthenticated" href="#/login">Login</a>
+                        <a ng-show="auth.isAuthenticated" href=" " ng-click="logout()">Logout</a>
+                    </li>
+                -->
+                </ul>
+                <p id="account_info" ng-show="auth.isAuthenticated" class="navbar-text navbar-right hidden-xs">Signed in as {{auth.profile.name}} ({{auth.profile.role[0]}})</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="mainPage">
+        <div class="container-fluid" ng-view />
+    </div>
+</body>
+</html>

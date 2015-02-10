@@ -1,0 +1,12 @@
+﻿<div ng-controller="loginController as loginCtrl">
+    <div class="panel panel-default">
+        <div id="loginPanel" class="panel-body">
+            <p ng-show="auth.isAuthenticated">You are already signed in</p>
+            <p ng-show="!auth.isAuthenticated">
+                You need to sign in
+                <br /><br />
+                <button ng-click="loginCtrl.login()" class="btn btn-default">Click to login</button>
+            </p>
+        </div>
+    </div>
+</div>

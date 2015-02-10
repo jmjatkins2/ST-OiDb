@@ -1,0 +1,200 @@
+﻿body {
+    background: #f4f6f7;
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+}
+
+
+/* Navigation Bar - overriding bootstrap styles for navbar */
+#main-navbar {
+    border: none;
+    border-radius: 0;
+    background-image: -webkit-linear-gradient(top,#52aded 0,#418ce4 100%);
+    background-image: linear-gradient(to bottom,#52aded 0,#418ce4 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff52aded', endColorstr='#ff418ce4', GradientType=0);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 5px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 5px rgba(0, 0, 0, 0.075);
+}
+
+.navbar-default {
+    background-color: #fff;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #fff;
+}
+
+.navbar-default .navbar-text {
+    color: #fff;
+}
+
+.navbar-default .navbar-toggle:hover, 
+.navbar-default .navbar-toggle:focus {
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus {
+color: #fff;
+    background-color: transparent;
+}
+
+#main-navbar .nav > li > a:hover {
+    background: rgba(0,0,0,.08);
+    border-color: #418ce4;
+}
+
+.navbar-header{
+    background-color: #fff;
+}
+
+.navbar-brand {
+    padding: 10px 15px;
+    background-color: #fff;
+}
+
+.navbar-brand img {
+    height: 30px;
+}
+
+.navbar-default .navbar-brand:hover, 
+.navbar-default .navbar-brand:focus {
+    background-color: #fff;
+}
+
+/* quick fix: hide account name to stop line break - will need to be adjusted if more menu items added */
+@media screen and (max-width: 900px) {
+    #account_info {
+        display: none !important;
+    }
+}
+
+
+/* General */
+
+/* panel button */
+.panel-header-button {
+    position: relative;
+    top: -6px;  
+}
+
+
+
+/* Calibration Page*/
+/* glyphicon next to input */
+.input-glyphicon {
+    background: white;
+}
+.input-glyphicon-left {
+    border-left: 0;
+    padding-left: 0;
+}
+
+/* glyphicon spin */
+.glyphicon-refresh-animate {
+  -webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+     -webkit-transform-origin: 50% 58%;
+         transform-origin:50% 58%;
+         -ms-transform-origin:50% 58%; /* IE 9 */
+}
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#grid-calibrations-results{
+    max-width: 600px;
+}
+
+
+
+/* Login Page */
+#loginPanel {
+    text-align: center;
+}
+
+/* override login close button - we don't actually want the user closing login */
+.a0-close {
+    display: none !important;
+}
+
+
+
+/* Printing */
+@media screen {
+    #printSection {
+        display: none;
+    }
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    .no_print {
+        visibility: hidden !important;
+    }
+
+    #printSection, #printSection * {
+        visibility: visible;
+    }
+
+    #printSection {
+        position: absolute;
+        left: 0;
+        top: 0;
+        text-align: center;
+        width:100%;
+        padding:20px;
+    }
+
+    #elementToPrint
+    {
+        text-align: left;
+    }
+
+    @page {
+        size: auto; /* auto is the initial value */
+        margin: 0; /* this affects the margin in the printer settings */
+    }
+
+    body {
+        background-color: #FFFFFF;
+        margin: 40px; /* this affects the margin on the content before sending to printer */
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #logo {
+        width: 600px;
+    }
+}

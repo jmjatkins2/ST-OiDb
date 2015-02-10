@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+# SharpDevelop 4.4
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OceanInstruments.MockClient", "OceanInstruments.MockClient\OceanInstruments.MockClient.csproj", "{C76D10B4-BF2D-445F-A0F7-E59EE6F760B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OceanInstruments.ApiProxy", "..\OceanInstruments.ApiProxy\OceanInstruments.ApiProxy.csproj", "{FD878032-2338-49EF-AE3A-11022B80942B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogCal", "..\LogCal\LogCal.csproj", "{FFB830E4-7CB0-45B2-8700-6DC19F44BD84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OiDbService", "..\OiDbService\OiDbService.csproj", "{9C67F687-BA17-40E0-96C1-3F829593E55A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C76D10B4-BF2D-445F-A0F7-E59EE6F760B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C76D10B4-BF2D-445F-A0F7-E59EE6F760B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C76D10B4-BF2D-445F-A0F7-E59EE6F760B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C76D10B4-BF2D-445F-A0F7-E59EE6F760B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD878032-2338-49EF-AE3A-11022B80942B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD878032-2338-49EF-AE3A-11022B80942B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD878032-2338-49EF-AE3A-11022B80942B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD878032-2338-49EF-AE3A-11022B80942B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFB830E4-7CB0-45B2-8700-6DC19F44BD84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFB830E4-7CB0-45B2-8700-6DC19F44BD84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFB830E4-7CB0-45B2-8700-6DC19F44BD84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFB830E4-7CB0-45B2-8700-6DC19F44BD84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C67F687-BA17-40E0-96C1-3F829593E55A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C67F687-BA17-40E0-96C1-3F829593E55A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C67F687-BA17-40E0-96C1-3F829593E55A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C67F687-BA17-40E0-96C1-3F829593E55A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
