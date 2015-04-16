@@ -19,6 +19,11 @@
           templateUrl: 'views/calibrations.html',
           requiresLogin: false
       })
+      .when('/prodTests', {
+          controller: 'prodTestController',
+          templateUrl: 'views/prodTest.html',
+          requiresLogin: true
+      })
       .otherwise({
           redirectTo: '/#'
       });

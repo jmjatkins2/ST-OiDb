@@ -44,6 +44,7 @@
     <script type="text/javascript" src="controllers/homeController.js"></script>
     <script type="text/javascript" src="controllers/loginController.js"></script>
     <script type="text/javascript" src="controllers/calibrationsController.js"></script>
+    <script type="text/javascript" src="controllers/prodTestController.js"></script>
     <script type="text/javascript" src="directives/printDirective.js"></script>
 </head>
 <body ng-controller="mainController">
@@ -75,11 +76,11 @@
                     <li>
                         <a href="#/calibrations">Calibration Results</a>
                     </li>
+                -->
                     <li>
                         <a ng-show="!auth.isAuthenticated" href="#/login">Login</a>
                         <a ng-show="auth.isAuthenticated" href=" " ng-click="logout()">Logout</a>
                     </li>
-                -->
                 </ul>
                 <p id="account_info" ng-show="auth.isAuthenticated" class="navbar-text navbar-right hidden-xs">Signed in as {{auth.profile.name}} ({{auth.profile.role[0]}})</p>
             </div>

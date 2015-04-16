@@ -29,5 +29,7 @@ namespace OceanInstruments.Web
         public virtual DbSet<Calibration> Calibrations { get; set; }
         public virtual DbSet<Device> Devices { get; set; }
         public virtual DbSet<Model> Models { get; set; }
+        public virtual DbSet<ProdTestResult> ProdTestResults { get; set; }
+        public virtual DbSet<ProdTestSubResult> ProdTestSubResults { get; set; }
     }
 }

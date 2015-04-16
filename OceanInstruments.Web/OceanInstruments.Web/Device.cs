@@ -17,6 +17,7 @@ namespace OceanInstruments.Web
         public Device()
         {
             this.Calibrations = new HashSet<Calibration>();
+            this.ProdTestResults = new HashSet<ProdTestResult>();
         }
     
         public int DeviceId { get; set; }
@@ -27,5 +28,6 @@ namespace OceanInstruments.Web
     
         public virtual ICollection<Calibration> Calibrations { get; set; }
         public virtual Model Model { get; set; }
+        public virtual ICollection<ProdTestResult> ProdTestResults { get; set; }
     }
 }

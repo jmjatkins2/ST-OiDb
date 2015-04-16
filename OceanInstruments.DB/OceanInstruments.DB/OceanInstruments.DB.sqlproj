@@ -68,10 +68,15 @@
     <Build Include="dbo\Tables\Model.sql" />
     <Build Include="dbo\Tables\Device.sql" />
     <Build Include="dbo\Tables\Calibration.sql" />
+    <Build Include="dbo\Tables\ProdTestResult.sql" />
+    <Build Include="dbo\Tables\ProdTestSubResult.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LocalDB.scmp" />
     <None Include="ProdDB.scmp" />
     <None Include="PublishProfiles\OceanInstrumentsDB.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="OceanInstruments.DB.refactorlog" />
   </ItemGroup>
 </Project>

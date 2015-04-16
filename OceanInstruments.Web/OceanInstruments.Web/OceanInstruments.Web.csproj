@@ -169,6 +169,8 @@
     <Compile Include="ControllersAPI\CalibrationsController.cs" />
     <Compile Include="ControllersAPI\DevicesController.cs" />
     <Compile Include="ControllersAPI\ModelsController.cs" />
+    <Compile Include="ControllersAPI\ProdTestSubResultController.cs" />
+    <Compile Include="ControllersAPI\ProdTestResultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Device.cs">
       <DependentUpon>OceanInstrumentsDB.tt</DependentUpon>
@@ -194,16 +196,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OceanInstrumentsDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ProdTestResult.cs">
+      <DependentUpon>OceanInstrumentsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProdTestSubResult.cs">
+      <DependentUpon>OceanInstrumentsDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\app.js" />
+    <Content Include="App\Controllers\prodTestController.js" />
     <Content Include="App\Controllers\calibrationsController.js" />
     <Content Include="App\Controllers\homeController.js" />
     <Content Include="App\Controllers\loginController.js" />
     <Content Include="App\Directives\printDirective.js" />
     <Content Include="App\Index.html" />
+    <Content Include="App\Views\prodTest.html" />
     <Content Include="App\Views\calibrations.html" />
     <Content Include="App\Views\home.html" />
     <Content Include="App\Views\login.html" />
