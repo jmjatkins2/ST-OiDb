@@ -54,7 +54,7 @@ namespace OceanInstruments.Web.ControllersAPI
             return from d in db.Devices
                    where d.SerialNo.StartsWith(serialNo)
                    orderby d.SerialNo
-                   select new { d.DeviceId, d.SerialNo, ModelName = d.Model.FullDesc };
+                   select new { d.DeviceId, d.SerialNo, d.ModelId, ModelName = d.Model.FullDesc };
         }
 
         // PUT: api/Devices/5

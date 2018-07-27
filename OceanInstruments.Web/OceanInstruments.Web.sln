@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2013 for Web
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OceanInstruments.Web", "OceanInstruments.Web\OceanInstruments.Web.csproj", "{C63AB2E4-3383-4CC8-83AE-81803979322C}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "OceanInstruments.DB", "..\OceanInstruments.DB\OceanInstruments.DB\OceanInstruments.DB.sqlproj", "{02EFDBD2-19CC-49AF-AD92-46494286897D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,12 @@ Global
 		{C63AB2E4-3383-4CC8-83AE-81803979322C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C63AB2E4-3383-4CC8-83AE-81803979322C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C63AB2E4-3383-4CC8-83AE-81803979322C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02EFDBD2-19CC-49AF-AD92-46494286897D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02EFDBD2-19CC-49AF-AD92-46494286897D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02EFDBD2-19CC-49AF-AD92-46494286897D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{02EFDBD2-19CC-49AF-AD92-46494286897D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02EFDBD2-19CC-49AF-AD92-46494286897D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02EFDBD2-19CC-49AF-AD92-46494286897D}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

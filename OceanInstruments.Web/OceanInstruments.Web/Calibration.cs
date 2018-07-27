@@ -21,6 +21,10 @@ namespace OceanInstruments.Web
         public double Tone { get; set; }
         public double RefLevel { get; set; }
         public System.DateTime DateCreated { get; set; }
+        public string RefDevice { get; set; }
+        public Nullable<int> CalType { get; set; }
+        public string Operator { get; set; }
+        public string RefSerial { get; set; }
     
         public virtual Device Device { get; set; }
     }

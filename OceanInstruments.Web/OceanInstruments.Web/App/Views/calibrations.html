@@ -110,20 +110,39 @@
                                 <td>Serial</td>
                                 <td>2015497</td>
                             </tr>
-                            <tr class="rowDivider">
+                            <tr ng-hide="calibrations.selectedCalibration.calType > 0" class="rowDivider">
                                 <td rowspan="2">Full Scale Response</td>
                                 <td>High Gain</td>
                                 <td><b>{{calibrations.selectedCalibration.highFreq}} dB re. 1 μPa</b></td>
                             </tr>
-                            <tr>
+                            <tr ng-hide="calibrations.selectedCalibration.calType > 0">
                                 <td>Low Gain</td>
                                 <td><b>{{calibrations.selectedCalibration.lowFreq}} dB re. 1 μPa</b></td>
                             </tr>
-                            <tr class="rowDivider">
+                            <tr ng-show="calibrations.selectedCalibration.calType == 1" class="rowDivider">
+                                <td rowspan="1">Sensitivity</td>
+                                <td></td>
+                                <td><b>{{calibrations.selectedCalibration.highFreq}} dBFS @ 1 V</b></td>
+                            </tr>
+                            <tr ng-show="calibrations.selectedCalibration.calType == 2" class="rowDivider">
+                                <td rowspan="1">Sensitivity</td>
+                                <td></td>
+                                <td><b>{{calibrations.selectedCalibration.highFreq}} dB re. 1 μPa/V</b></td>
+                            </tr>
+                            
+                            <tr ng-hide="calibrations.selectedCalibration.calType > 0" class="rowDivider">
                                 <td rowspan="2">Calibration Tone</td>
                                 <td>RTI Level @ 1kHz </td>
                                 <td><b>{{calibrations.selectedCalibration.tone}} dB re. 1 μPa</b></td>
                             </tr>
+                            
+                            <tr ng-show="calibrations.selectedCalibration.calType == 1" class="rowDivider">
+                                <td rowspan="2">Calibration Tone</td>
+                                <td>RTI Level @ 1kHz </td>
+                                <td><b>{{calibrations.selectedCalibration.tone}} dB re. FS</b></td>
+                            </tr>
+
+
                         </tbody>
                     </table>
                 </div>
