@@ -111,18 +111,18 @@
                                 <td>2015497</td>
                             </tr>
                             <tr ng-hide="calibrations.selectedCalibration.calType > 0" class="rowDivider">
-                                <td rowspan="2">Full Scale Response</td>
+                                <td rowspan="2">End-to-End Calibration</td>
                                 <td>High Gain</td>
-                                <td><b>{{calibrations.selectedCalibration.highFreq}} dB re. 1 μPa</b></td>
+                                <td><b>{{calibrations.selectedCalibration.highFreq}} dB</b></td>
                             </tr>
                             <tr ng-hide="calibrations.selectedCalibration.calType > 0">
                                 <td>Low Gain</td>
-                                <td><b>{{calibrations.selectedCalibration.lowFreq}} dB re. 1 μPa</b></td>
+                                <td><b>{{calibrations.selectedCalibration.lowFreq}} dB</b></td>
                             </tr>
                             <tr ng-show="calibrations.selectedCalibration.calType == 1" class="rowDivider">
                                 <td rowspan="1">Sensitivity</td>
                                 <td></td>
-                                <td><b>{{calibrations.selectedCalibration.highFreq}} dBFS @ 1 V</b></td>
+                                <td><b>{{calibrations.selectedCalibration.highFreq}} dB </b></td>
                             </tr>
                             <tr ng-show="calibrations.selectedCalibration.calType == 2" class="rowDivider">
                                 <td rowspan="1">Sensitivity</td>
@@ -139,7 +139,7 @@
                             <tr ng-show="calibrations.selectedCalibration.calType == 1" class="rowDivider">
                                 <td rowspan="2">Calibration Tone</td>
                                 <td>RTI Level @ 1kHz </td>
-                                <td><b>{{calibrations.selectedCalibration.tone}} dB re. FS</b></td>
+                                <td><b>{{calibrations.selectedCalibration.tone}} dB re. 1 V</b></td>
                             </tr>
 
 
