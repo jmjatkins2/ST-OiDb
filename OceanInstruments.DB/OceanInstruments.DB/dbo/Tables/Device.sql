@@ -4,6 +4,7 @@
     [ModelId]     INT           NOT NULL,
     [DateCreated] DATETIME2 (0) CONSTRAINT [DF_Device___DateCreated] DEFAULT (getdate()) NOT NULL,
     [DateUpdated] DATETIME2 (0) NULL,
+    [HardwareSerial] NVARCHAR(50) NULL, 
     CONSTRAINT [PK_Device] PRIMARY KEY CLUSTERED ([DeviceId] ASC),
     CONSTRAINT [Device_Model_FK] FOREIGN KEY ([ModelId]) REFERENCES [dbo].[Model] ([ModelId])
 );

@@ -25,6 +25,7 @@ namespace OceanInstruments.Web
         public int ModelId { get; set; }
         public System.DateTime DateCreated { get; set; }
         public Nullable<System.DateTime> DateUpdated { get; set; }
+        public string HardwareSerial { get; set; }
     
         public virtual ICollection<Calibration> Calibrations { get; set; }
         public virtual Model Model { get; set; }
